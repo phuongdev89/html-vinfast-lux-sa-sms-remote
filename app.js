@@ -92,7 +92,7 @@
   // Register Service Worker
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-      navigator.serviceWorker.register('https://phuongdev89.github.io/html-vinfast-lux-sa-sms-remote/service-worker.js').catch(console.error);
+      navigator.serviceWorker.register('./service-worker.js').catch(console.error);
     });
   }
 })();

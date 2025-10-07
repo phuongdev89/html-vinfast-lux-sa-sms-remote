@@ -4,7 +4,6 @@ const ASSETS = [
   './index.html',
   './styles.css',
   './app.js',
-  './car.png',
   './icons/manifest.webmanifest',
   './icons/apple-touch-icon.png',
   './icons/favicon.ico',
