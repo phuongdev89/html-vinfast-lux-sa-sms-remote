@@ -1,7 +1,7 @@
 {
   "name": "LuxSA Remote",
   "short_name": "LuxSA Remote",
-  "start_url": ".",
+  "start_url": "https://phuongdev89.github.io/html-vinfast-lux-sa-sms-remote/",
   "display": "standalone",
   "background_color": "#141418",
   "theme_color": "#111113",
