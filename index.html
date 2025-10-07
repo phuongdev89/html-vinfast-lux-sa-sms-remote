@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Car Remote</title>
+  <meta name="theme-color" content="#111113" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <link rel="icon" href="icons/icon-192.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    // Add iOS standalone class for safe-area paddings
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.navigator.standalone) document.body.classList.add('standalone');
+    });
+  </script>
+</head>
+<body>
+  <div class="app">
+    <main>
+      <!-- HOME -->
+      <section id="home" class="screen active">
+        <div class="card car-wrap">
+          <div class="car" role="img" aria-label="Minh hoạ chiếc ô tô"></div>
+        </div>
+
+        <div class="card">
+          <div class="grid" style="margin-bottom:12px">
+            <button class="btn primary" data-action="khoa"><span class="emoji">🔒</span>Khoá</button>
+            <button class="btn primary" data-action="mokhoa"><span class="emoji">🔓</span>Mở khoá</button>
+            <button class="btn" data-action="khoidong"><span class="emoji">🟢</span>Khởi động</button>
+            <button class="btn" data-action="tatxe"><span class="emoji">⛔</span>Tắt máy</button>
+            <button class="btn" data-action="mocop"><span class="emoji">🧳</span>Mở cốp</button>
+            <button class="btn" data-action="dongcop"><span class="emoji">📦</span>Đóng cốp</button>
+          </div>
+          <div class="row">
+            <button class="btn" id="toSettingsBtn2">⚙️ Setting</button>
+          </div>
+        </div>
+
+        <p class="hint">Ứng dụng sẽ mở tin nhắn với nội dung đúng cú pháp để bạn gửi đến xe.</p>
+        <div class="footer-space"></div>
+      </section>
+
+      <!-- SETTINGS -->
+      <section id="settings" class="screen">
+        <div class="card">
+          <h2 style="margin:0 0 6px 0;font-size:18px;">Cài đặt</h2>
+          <p style="margin:0 0 12px 0;color:var(--muted);font-size:14px">Nhập số điện thoại của xe và mật khẩu lệnh.</p>
+
+          <form id="settingsForm">
+            <label for="phone">Số điện thoại của xe</label>
+            <input id="phone" name="phone" type="tel" inputmode="tel" placeholder="+84..." autocomplete="tel" required />
+
+            <label for="pass">Mật khẩu (6 ký tự)</label>
+            <input id="pass" name="pass" type="text" inputmode="numeric" pattern=".{1,}" placeholder="xxxxxx" required />
+
+            <button class="save" type="submit">Lưu</button>
+          </form>
+        </div>
+
+        <div class="card">
+          <h3 style="margin:0 0 8px 0;font-size:16px;">Gửi lệnh cài số điện thoại</h3>
+          <p style="margin-top:0;color:var(--muted);font-size:14px">Soạn sẵn: <code>#xxxxxx,caisodt&amp;</code> và gửi đến số vừa lưu.</p>
+          <button class="save btn" id="btnCaiSo"><span class="emoji">✉️</span> Soạn tin nhắn cài số</button>
+        </div>
+
+        <div class="row">
+          <button class="btn" id="toHomeBtn">⬅️ Quay lại</button>
+        </div>
+        <div class="footer-space"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
