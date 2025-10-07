@@ -1,0 +1,22 @@
+{
+  "name": "LuxSA Remote",
+  "short_name": "LuxSA Remote",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#141418",
+  "theme_color": "#111113",
+  "icons": [
+    {
+      "src": "https://phuongdev89.github.io/html-vinfast-lux-sa-sms-remote/icons/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://phuongdev89.github.io/html-vinfast-lux-sa-sms-remote/icons/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

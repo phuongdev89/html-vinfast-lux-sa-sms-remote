@@ -1,12 +1,17 @@
-const CACHE_NAME = 'car-remote-pwa-v1';
+const CACHE_NAME = 'html-vinfast-lux-sa-sms-remote-v1';
 const ASSETS = [
   './',
   './index.html',
   './styles.css',
   './app.js',
-  './manifest.webmanifest',
-  './icons/icon-192.png',
-  './icons/icon-512.png'
+  './car.png',
+  './icons/manifest.webmanifest',
+  './icons/apple-touch-icon.png',
+  './icons/favicon.ico',
+  './icons/favicon.svg',
+  './icons/favicon-96x96.png',
+  './icons/web-app-manifest-192x192.png',
+  './icons/web-app-manifest-512x512.png'
 ];
 
 self.addEventListener('install', (e) => {
